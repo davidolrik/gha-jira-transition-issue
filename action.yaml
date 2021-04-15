@@ -1,0 +1,24 @@
+name: "Transition JIRA issue"
+
+description: "Transition JIRA issue on JIRA Server"
+
+inputs:
+  jira_base_url:
+    description: JIRA Server base url
+    required: true
+  jira_username:
+    description: JIRA Server username
+    required: true
+  jira_password:
+    description: JIRA Server password
+    required: true
+  issue_key:
+    description: Issue key to transition
+    required: true
+  issue_status:
+    description: Status to transition issue to
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
